@@ -1,0 +1,9 @@
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\bin\Debug\SP_Lab2.exe.config
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\bin\Debug\SP_Lab2.exe
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\bin\Debug\SP_Lab2.pdb
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.csprojAssemblyReference.cache
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.Properties.Resources.resources
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.csproj.GenerateResource.cache
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.exe
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.pdb
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.Form1.resources
