@@ -117,14 +117,14 @@
             // workerToolStripMenuItem
             // 
             this.workerToolStripMenuItem.Name = "workerToolStripMenuItem";
-            this.workerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.workerToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.workerToolStripMenuItem.Text = "Worker";
             this.workerToolStripMenuItem.Click += new System.EventHandler(this.HireWorkerClicked);
             // 
             // masterToolStripMenuItem
             // 
             this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
-            this.masterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.masterToolStripMenuItem.Size = new System.Drawing.Size(112, 22);
             this.masterToolStripMenuItem.Text = "Master";
             this.masterToolStripMenuItem.Click += new System.EventHandler(this.HireMasterClicked);
             // 
