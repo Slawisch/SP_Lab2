@@ -29,78 +29,181 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.showBt = new System.Windows.Forms.Button();
-            this.factoryName = new System.Windows.Forms.TextBox();
-            this.workersNum = new System.Windows.Forms.NumericUpDown();
-            this.mastersNum = new System.Windows.Forms.NumericUpDown();
-            this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize) (this.workersNum)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize) (this.mastersNum)).BeginInit();
+            this.components = new System.ComponentModel.Container();
+            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.randomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.manualToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.hireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.workerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.dismissToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.workerToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.masterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.potentialProfitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.mergeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // showBt
+            // listBox1
             // 
-            this.showBt.Location = new System.Drawing.Point(138, 132);
-            this.showBt.Name = "showBt";
-            this.showBt.Size = new System.Drawing.Size(75, 23);
-            this.showBt.TabIndex = 0;
-            this.showBt.Text = "Show me";
-            this.showBt.UseCompatibleTextRendering = true;
-            this.showBt.UseVisualStyleBackColor = true;
-            this.showBt.Click += new System.EventHandler(this.OnButtonClick);
+            this.listBox1.FormattingEnabled = true;
+            this.listBox1.Location = new System.Drawing.Point(0, 24);
+            this.listBox1.Name = "listBox1";
+            this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.listBox1.Size = new System.Drawing.Size(897, 225);
+            this.listBox1.TabIndex = 0;
+            this.listBox1.DoubleClick += new System.EventHandler(this.LbDoubleClicked);
             // 
-            // factoryName
+            // contextMenuStrip1
             // 
-            this.factoryName.Location = new System.Drawing.Point(113, 23);
-            this.factoryName.Name = "factoryName";
-            this.factoryName.Size = new System.Drawing.Size(100, 20);
-            this.factoryName.TabIndex = 1;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // workersNum
+            // contextMenuStrip2
             // 
-            this.workersNum.Location = new System.Drawing.Point(113, 49);
-            this.workersNum.Name = "workersNum";
-            this.workersNum.Size = new System.Drawing.Size(100, 20);
-            this.workersNum.TabIndex = 2;
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // mastersNum
+            // menuStrip1
             // 
-            this.mastersNum.Location = new System.Drawing.Point(113, 75);
-            this.mastersNum.Name = "mastersNum";
-            this.mastersNum.Size = new System.Drawing.Size(100, 20);
-            this.mastersNum.TabIndex = 3;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.addToolStripMenuItem, this.deleteToolStripMenuItem, this.hireToolStripMenuItem, this.dismissToolStripMenuItem, this.potentialProfitToolStripMenuItem, this.mergeToolStripMenuItem, this.exitToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(897, 24);
+            this.menuStrip1.TabIndex = 8;
+            this.menuStrip1.Text = "menuStrip1";
             // 
-            // label1
+            // addToolStripMenuItem
             // 
-            this.label1.Location = new System.Drawing.Point(22, 26);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 21);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Factory name:\r\n\r\n";
+            this.addToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.randomToolStripMenuItem, this.manualToolStripMenuItem});
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            this.addToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.addToolStripMenuItem.Text = "Add";
+            // 
+            // randomToolStripMenuItem
+            // 
+            this.randomToolStripMenuItem.Name = "randomToolStripMenuItem";
+            this.randomToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.randomToolStripMenuItem.Text = "Random";
+            this.randomToolStripMenuItem.Click += new System.EventHandler(this.RandomAddClicked);
+            // 
+            // manualToolStripMenuItem
+            // 
+            this.manualToolStripMenuItem.Name = "manualToolStripMenuItem";
+            this.manualToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.manualToolStripMenuItem.Text = "Manual";
+            this.manualToolStripMenuItem.Click += new System.EventHandler(this.ManualAddCLicked);
+            // 
+            // deleteToolStripMenuItem
+            // 
+            this.deleteToolStripMenuItem.Name = "deleteToolStripMenuItem";
+            this.deleteToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.deleteToolStripMenuItem.Text = "Delete";
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.DeleteClicked);
+            // 
+            // hireToolStripMenuItem
+            // 
+            this.hireToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.workerToolStripMenuItem, this.masterToolStripMenuItem});
+            this.hireToolStripMenuItem.Name = "hireToolStripMenuItem";
+            this.hireToolStripMenuItem.Size = new System.Drawing.Size(41, 20);
+            this.hireToolStripMenuItem.Text = "Hire";
+            // 
+            // workerToolStripMenuItem
+            // 
+            this.workerToolStripMenuItem.Name = "workerToolStripMenuItem";
+            this.workerToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.workerToolStripMenuItem.Text = "Worker";
+            this.workerToolStripMenuItem.Click += new System.EventHandler(this.HireWorkerClicked);
+            // 
+            // masterToolStripMenuItem
+            // 
+            this.masterToolStripMenuItem.Name = "masterToolStripMenuItem";
+            this.masterToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.masterToolStripMenuItem.Text = "Master";
+            this.masterToolStripMenuItem.Click += new System.EventHandler(this.HireMasterClicked);
+            // 
+            // dismissToolStripMenuItem
+            // 
+            this.dismissToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {this.workerToolStripMenuItem1, this.masterToolStripMenuItem1});
+            this.dismissToolStripMenuItem.Name = "dismissToolStripMenuItem";
+            this.dismissToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
+            this.dismissToolStripMenuItem.Text = "Dismiss";
+            // 
+            // workerToolStripMenuItem1
+            // 
+            this.workerToolStripMenuItem1.Name = "workerToolStripMenuItem1";
+            this.workerToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.workerToolStripMenuItem1.Text = "Worker";
+            this.workerToolStripMenuItem1.Click += new System.EventHandler(this.DismissWorkerClicked);
+            // 
+            // masterToolStripMenuItem1
+            // 
+            this.masterToolStripMenuItem1.Name = "masterToolStripMenuItem1";
+            this.masterToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.masterToolStripMenuItem1.Text = "Master";
+            this.masterToolStripMenuItem1.Click += new System.EventHandler(this.DismissMasterClicked);
+            // 
+            // potentialProfitToolStripMenuItem
+            // 
+            this.potentialProfitToolStripMenuItem.Name = "potentialProfitToolStripMenuItem";
+            this.potentialProfitToolStripMenuItem.Size = new System.Drawing.Size(98, 20);
+            this.potentialProfitToolStripMenuItem.Text = "Potential Profit";
+            this.potentialProfitToolStripMenuItem.Click += new System.EventHandler(this.PotentialProfitClicked);
+            // 
+            // mergeToolStripMenuItem
+            // 
+            this.mergeToolStripMenuItem.Name = "mergeToolStripMenuItem";
+            this.mergeToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.mergeToolStripMenuItem.Text = "Merge";
+            this.mergeToolStripMenuItem.Click += new System.EventHandler(this.MergeClicked);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(38, 20);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitClicked);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 168);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.mastersNum);
-            this.Controls.Add(this.workersNum);
-            this.Controls.Add(this.factoryName);
-            this.Controls.Add(this.showBt);
+            this.ClientSize = new System.Drawing.Size(897, 249);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.listBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize) (this.workersNum)).EndInit();
-            ((System.ComponentModel.ISupportInitialize) (this.mastersNum)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.TextBox factoryName;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown mastersNum;
-        private System.Windows.Forms.Button showBt;
-        private System.Windows.Forms.NumericUpDown workersNum;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem dismissToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem hireToolStripMenuItem;
+        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ToolStripMenuItem manualToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem masterToolStripMenuItem1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem mergeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem potentialProfitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem randomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem workerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem workerToolStripMenuItem1;
 
         #endregion
     }

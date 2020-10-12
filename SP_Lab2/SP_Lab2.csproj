@@ -46,17 +46,37 @@
         <Reference Include="System.Xml" />
     </ItemGroup>
     <ItemGroup>
+        <Compile Include="Factories.cs" />
         <Compile Include="Factory.cs" />
+        <Compile Include="FactoryExtension.cs" />
         <Compile Include="Form1.cs">
             <SubType>Form</SubType>
         </Compile>
         <Compile Include="Form1.Designer.cs">
             <DependentUpon>Form1.cs</DependentUpon>
         </Compile>
+        <Compile Include="NewFactoryForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="NewFactoryForm.Designer.cs">
+          <DependentUpon>NewFactoryForm.cs</DependentUpon>
+        </Compile>
+        <Compile Include="PotentialProfitForm.cs">
+          <SubType>Form</SubType>
+        </Compile>
+        <Compile Include="PotentialProfitForm.Designer.cs">
+          <DependentUpon>PotentialProfitForm.cs</DependentUpon>
+        </Compile>
         <Compile Include="Program.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <EmbeddedResource Include="Form1.resx">
           <DependentUpon>Form1.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="NewFactoryForm.resx">
+          <DependentUpon>NewFactoryForm.cs</DependentUpon>
+        </EmbeddedResource>
+        <EmbeddedResource Include="PotentialProfitForm.resx">
+          <DependentUpon>PotentialProfitForm.cs</DependentUpon>
         </EmbeddedResource>
         <EmbeddedResource Include="Properties\Resources.resx">
             <Generator>ResXFileCodeGenerator</Generator>

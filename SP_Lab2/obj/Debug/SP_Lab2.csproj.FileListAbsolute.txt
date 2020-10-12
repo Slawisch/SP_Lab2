@@ -7,3 +7,5 @@ C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.csproj.GenerateRe
 C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.exe
 C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.pdb
 C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.Form1.resources
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.NewFactoryForm.resources
+C:\Users\dmitr\RiderProjects\SP_Lab2\SP_Lab2\obj\Debug\SP_Lab2.PotentialProfitForm.resources
