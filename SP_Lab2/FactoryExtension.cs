@@ -69,5 +69,4 @@ namespace SP_Lab2
         }
     }
     
-    
 }

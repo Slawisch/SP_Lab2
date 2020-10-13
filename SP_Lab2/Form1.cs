@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
@@ -28,63 +27,46 @@ namespace SP_Lab2
             }
         }
 
-        private void DeleteClicked(object sender, EventArgs e)
+        private void ActionByIndex(int index, Action<Factory> action)
         {
-            int delIndex = listBox1.SelectedIndex;
-            if (delIndex >= 0 && delIndex < Factories.Length)
+            if (index >= 0 && index < Factories.Length)
             {
-                Factories.DeleteFactory(delIndex);
+                action?.Invoke(Factories.GetFactoryByIndex(index));
                 UpdateListBox();
             }
         }
 
-        private void LbDoubleClicked(object sender, EventArgs e)
+        private void DeleteClicked(object sender, EventArgs e)
         {
-            
+            ActionByIndex(listBox1.SelectedIndex, factory => Factories.DeleteFactory(listBox1.SelectedIndex));
         }
 
         private void HireWorkerClicked(object sender, EventArgs e)
         {
-            int hireWIndex = listBox1.SelectedIndex;
-            if (hireWIndex >= 0 && hireWIndex < Factories.Length)
-            {
-                Factories.GetFactoryByIndex(hireWIndex).HireWorker();
-                UpdateListBox();
-            }
+            ActionByIndex(listBox1.SelectedIndex, factory => factory.HireWorker());
         }
 
         private void HireMasterClicked(object sender, EventArgs e)
         {
-            int hireMIndex = listBox1.SelectedIndex;
-            if (hireMIndex >= 0 && hireMIndex < Factories.Length)
-            {
-                Factories.GetFactoryByIndex(hireMIndex).HireMaster();
-                UpdateListBox();
-            }
+            ActionByIndex(listBox1.SelectedIndex, factory => factory.HireMaster());
         }
 
         private void DismissWorkerClicked(object sender, EventArgs e)
         {
-            int dismissWIndex = listBox1.SelectedIndex;
-            if (dismissWIndex >= 0 && dismissWIndex < Factories.Length)
+            ActionByIndex(listBox1.SelectedIndex, factory =>
             {
-                var factory = Factories.GetFactoryByIndex(dismissWIndex);
                 if(factory.Workers > 0)
                     factory.DismissWorker();
-                UpdateListBox();
-            }
+            });
         }
 
         private void DismissMasterClicked(object sender, EventArgs e)
         {
-            int dismissMIndex = listBox1.SelectedIndex;
-            if (dismissMIndex >= 0 && dismissMIndex < Factories.Length)
+            ActionByIndex(listBox1.SelectedIndex, factory =>
             {
-                var factory = Factories.GetFactoryByIndex(dismissMIndex);
                 if(factory.Masters > 0)
                     factory.DismissMaster();
-                UpdateListBox();
-            }
+            });
         }
 
         private void PotentialProfitClicked(object sender, EventArgs e)
@@ -130,6 +112,12 @@ namespace SP_Lab2
                 Factories.MergeFactories(indices);
                 UpdateListBox();
             }
+        }
+
+        private void SortClicked(object sender, EventArgs e)
+        {
+            Factories.Sort();
+            UpdateListBox();
         }
     }
 }

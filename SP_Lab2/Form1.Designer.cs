@@ -46,6 +46,7 @@
             this.masterToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.potentialProfitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mergeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btSort = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +59,6 @@
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.listBox1.Size = new System.Drawing.Size(897, 225);
             this.listBox1.TabIndex = 0;
-            this.listBox1.DoubleClick += new System.EventHandler(this.LbDoubleClicked);
             // 
             // contextMenuStrip1
             // 
@@ -72,7 +72,7 @@
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.addToolStripMenuItem, this.deleteToolStripMenuItem, this.hireToolStripMenuItem, this.dismissToolStripMenuItem, this.potentialProfitToolStripMenuItem, this.mergeToolStripMenuItem, this.exitToolStripMenuItem});
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {this.addToolStripMenuItem, this.deleteToolStripMenuItem, this.hireToolStripMenuItem, this.dismissToolStripMenuItem, this.potentialProfitToolStripMenuItem, this.mergeToolStripMenuItem, this.btSort, this.exitToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(897, 24);
@@ -138,14 +138,14 @@
             // workerToolStripMenuItem1
             // 
             this.workerToolStripMenuItem1.Name = "workerToolStripMenuItem1";
-            this.workerToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.workerToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.workerToolStripMenuItem1.Text = "Worker";
             this.workerToolStripMenuItem1.Click += new System.EventHandler(this.DismissWorkerClicked);
             // 
             // masterToolStripMenuItem1
             // 
             this.masterToolStripMenuItem1.Name = "masterToolStripMenuItem1";
-            this.masterToolStripMenuItem1.Size = new System.Drawing.Size(152, 22);
+            this.masterToolStripMenuItem1.Size = new System.Drawing.Size(112, 22);
             this.masterToolStripMenuItem1.Text = "Master";
             this.masterToolStripMenuItem1.Click += new System.EventHandler(this.DismissMasterClicked);
             // 
@@ -162,6 +162,13 @@
             this.mergeToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.mergeToolStripMenuItem.Text = "Merge";
             this.mergeToolStripMenuItem.Click += new System.EventHandler(this.MergeClicked);
+            // 
+            // btSort
+            // 
+            this.btSort.Name = "btSort";
+            this.btSort.Size = new System.Drawing.Size(40, 20);
+            this.btSort.Text = "Sort";
+            this.btSort.Click += new System.EventHandler(this.SortClicked);
             // 
             // exitToolStripMenuItem
             // 
@@ -188,6 +195,7 @@
         }
 
         private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem btSort;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;

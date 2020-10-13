@@ -1,6 +1,4 @@
 ﻿using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Windows.Forms;
 
 namespace SP_Lab2
 {
@@ -12,20 +10,12 @@ namespace SP_Lab2
             get => _factories.Count;
         }
 
-        public static void AddFactory(Factory factory)
-        {
-            _factories.Add(factory);
-        }
+        public static void AddFactory(Factory factory) => _factories.Add(factory);
+       
 
-        public static Factory GetFactoryByIndex(int index)
-        {
-            return _factories[index];
-        }
+        public static Factory GetFactoryByIndex(int index) => _factories[index];
 
-        public static void DeleteFactory(int index)
-        {
-            _factories.RemoveAt(index);
-        }
+        public static void DeleteFactory(int index) => _factories.RemoveAt(index);
         
         public static void MergeFactories<T>(T indices) where T: IList<int>
         {
@@ -44,5 +34,7 @@ namespace SP_Lab2
             
             AddFactory(finalFactory);
         }
+
+        public static void Sort() => _factories.Sort();
     }
 }
